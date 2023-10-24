@@ -1,28 +1,21 @@
-import { Metadata } from 'next'
-import Image from 'next/image'
+import Link from 'next/link'
 
-import img from '~/src/images/sample.png'
+import { getArticles } from '~/src/utils/cms/getContents'
 
-export const metadata: Metadata = {
-  //metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}${process.env.NEXT_PUBLIC_BASE_PATH}`),
-  title: '',
-  description: '',
-  openGraph: {
-    title: '',
-    description: '',
-    images: '/og.png',
-  },
-  twitter: {
-    card: 'summary_large_image',
-  },
-}
+export default async function IndexPage() {
+  const { contents: articles } = await getArticles()
 
-export default function IndexPage() {
   return (
-    <div className="w-full">
-      <div className="h-screen">
-        <Image src={img} sizes="100vw" alt={''} />
-      </div>
+    <div className="w-11/12 mx-auto mt-10">
+      <ol className="mt-8 space-y-3 list-decimal list-inside ml-5">
+        {articles.map(({ id, title }) => (
+          <li key={id}>
+            <Link href={`/${id}`} className="text-red-400 font-bold hover:opacity-50 duration-300">
+              {title}
+            </Link>
+          </li>
+        ))}
+      </ol>
     </div>
   )
 }
