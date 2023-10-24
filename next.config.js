@@ -34,7 +34,7 @@ const config = {
   },
 }
 
-module.exports = withExportImages(withBoundleAnalyzer({ ...config, output: 'export' }))
+// module.exports = withExportImages(withBoundleAnalyzer({ ...config, output: 'export' }))
 
 // HTMLエクスポートしない場合
-// module.exports = withBoundleAnalyzer(config)
+module.exports = withBoundleAnalyzer(config)
