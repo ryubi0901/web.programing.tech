@@ -12,9 +12,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['sans-serif'],
-      self: ['serif'],
-      english: ['sans-serif'],
+      sans: ['var(--font-noto)', 'sans-serif'],
+      english: ['var(--font-lato)', 'sans-serif'],
     },
     fontSize: {
       xs: '.75rem',
@@ -37,7 +36,16 @@ module.exports = {
       '2xl': '.15em',
       '3xl': '.2em',
     },
-    extend: {},
+    extend: {
+      colors: {
+        green: {
+          900: '#22654c',
+          700: '#297a5c',
+          500: '#32936f',
+          200: '#99c9b7',
+        },
+      },
+    },
   },
   plugins: [],
   corePlugins: {},
