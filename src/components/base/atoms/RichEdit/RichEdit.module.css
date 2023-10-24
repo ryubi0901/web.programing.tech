@@ -1,14 +1,25 @@
 .RichEdit {
-  h2 {
-    @apply text-2xl;
+  @apply space-y-12;
+  h3 {
+    @apply relative pl-6 text-xl font-bold;
+    &:before {
+      @apply content-[''] absolute top-1/2 left-0 translate-y-[-40%] w-4 h-4 bg-green-400;
+    }
   }
 
-  h3 {
-    @apply text-lg;
+  h4 {
+    @apply relative pl-6 text-lg font-bold;
+    &:before {
+      @apply content-[''] absolute top-1/2 left-0 -translate-y-1/2 w-4 h-0.5 bg-green-400;
+    }
+  }
+
+  h5 {
+    @apply text-base font-bold;
   }
 
   a {
-    @apply underline break-all;
+    @apply break-all text-red-400 hover:opacity-50 duration-300;
   }
 
   blockquote {
