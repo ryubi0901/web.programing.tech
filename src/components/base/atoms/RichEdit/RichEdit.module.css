@@ -44,4 +44,12 @@
       }
     }
   }
+
+  code {
+    @apply bg-black text-white py-0.5 px-2 leading-none text-sm;
+  }
+
+  pre {
+    @apply bg-black text-white rounded-xl px-5 text-sm overflow-scroll;
+  }
 }
