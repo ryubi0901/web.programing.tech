@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import { ContentBodyList } from '~/src/components/base/atoms/ContentBodyList'
 import { getArticle, getArticles } from '~/src/utils/cms/getContents'
 
-export const revalidate = 60 * 3
+export const revalidate = 0
 
 export async function generateStaticParams() {
   const { contents: articles } = await getArticles()
