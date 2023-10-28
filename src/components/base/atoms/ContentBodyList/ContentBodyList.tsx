@@ -11,7 +11,7 @@ type Props = {
 
 const ContentBodyList = ({ body }: Props) => {
   return (
-    <div className="mt-7 space-y-7">
+    <div className="mt-12 space-y-12">
       {body.map((field) => {
         switch (field.fieldId) {
           case 'richedit': {

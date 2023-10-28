@@ -1,5 +1,5 @@
 .RichEdit {
-  @apply space-y-12;
+  @apply space-y-7;
   h3 {
     @apply relative pl-6 text-xl font-bold;
     &:before {
