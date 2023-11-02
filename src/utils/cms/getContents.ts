@@ -1,6 +1,7 @@
 import { MicroCMSQueries } from 'microcms-js-sdk'
 
 import { Article } from '~/src/types/articles'
+import { Settings } from '~/src/types/settings'
 
 import { apiClient } from './apiClient'
 
@@ -13,3 +14,5 @@ export const getArticle = (queries?: MicroCMSQueries) => (contentId: string) =>
     contentId,
     queries,
   })
+export const getSettings = (queries?: MicroCMSQueries) =>
+  apiClient.getObject<Settings>({ customRequestInit: { cache: 'no-store' }, endpoint: 'settings', queries })
