@@ -25,6 +25,7 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}${process.env.NEXT_PUBLIC_BASE_PATH}`),
   title: {
     default: 'Webプログラミング資料',
     template: '%s | Webプログラミング資料',
