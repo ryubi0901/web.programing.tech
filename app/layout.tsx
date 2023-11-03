@@ -25,12 +25,11 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  //metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}${process.env.NEXT_PUBLIC_BASE_PATH}`),
   title: {
     default: 'Webプログラミング資料',
     template: '%s | Webプログラミング資料',
   },
-  description: '',
+  description: 'Webの構築に必要なコーディング、プログラミングを学ぶための資料です。',
   openGraph: {
     title: '',
     description: '',
