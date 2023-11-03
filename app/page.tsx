@@ -9,7 +9,7 @@ export default async function IndexPage() {
   const settings = await getSettings()
 
   return (
-    <div className="w-11/12 mx-auto mt-20 grid grid-cols-2">
+    <div className="w-11/12 mx-auto my-20 space-y-20 grid grid-cols-1 md:space-y-0 md:grid-cols-2">
       <div>
         <h2 className="text-2xl font-bold">勉強内容</h2>
         <ol className="mt-8 space-y-3 list-decimal list-inside ml-5">
